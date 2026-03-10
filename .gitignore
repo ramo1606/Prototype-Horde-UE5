@@ -1,0 +1,69 @@
+# ── UNREAL ENGINE ────────────────────────────────────────────────────────────
+
+# Compiled binaries
+Binaries/
+Build/
+
+# Generated files — always regenerated from source
+Intermediate/
+DerivedDataCache/
+Saved/
+
+# Editor metadata — not needed in source control
+.vs/
+.vscode/
+*.suo
+*.user
+*.sln
+*.opensdf
+
+# UE project files — regenerated with GenerateProjectFiles
+*.vcxproj
+*.vcxproj.filters
+*.xcworkspace
+*.xcodeproj
+
+# Shader cache — large, platform-specific, regenerated on build
+ShaderLibraries/
+
+# Crash dumps
+Saved/Crashes/
+Saved/Logs/
+
+# Cooked content — very large, always rebuilt for distribution
+Saved/Cooked/
+Saved/StagedBuilds/
+
+# Automation / test artifacts
+Saved/Automation/
+
+# ── GIT LFS TRACKED (defined in .gitattributes) ──────────────────────────────
+# These are NOT ignored — they go through LFS:
+# Content/**/*.uasset
+# Content/**/*.umap
+# Content/**/*.ubulk
+# Source assets (FBX, PNG, WAV, etc.) if stored in repo
+
+# ── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── TOOLS ────────────────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.temp
+.idea/
+
+# ── KEEP THESE IN SOURCE CONTROL ─────────────────────────────────────────────
+# Source/          — all C++ source
+# Config/          — all .ini files including DefaultEngine.ini, DefaultScalability.ini
+# Content/         — via LFS (see .gitattributes)
+# Plugins/         — any custom or third-party plugins
+# CLAUDE.md        — project context
+# .uproject         — project descriptor

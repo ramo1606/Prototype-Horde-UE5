@@ -1,0 +1,75 @@
+# ── GIT LFS — UNREAL ENGINE BINARY ASSETS ───────────────────────────────────
+#
+# Git LFS is required for UE5 projects. Binary assets como uasset y umap
+# no son mergeables y pueden ser muy grandes. LFS los almacena fuera del
+# historial de git y solo descarga los que necesitás.
+#
+# Setup inicial:
+#   git lfs install
+#   git lfs track (este archivo ya configura el tracking)
+#
+# ─────────────────────────────────────────────────────────────────────────────
+
+# UE binary content
+*.uasset filter=lfs diff=lfs merge=lfs -text
+*.umap filter=lfs diff=lfs merge=lfs -text
+*.ubulk filter=lfs diff=lfs merge=lfs -text
+*.uptnl filter=lfs diff=lfs merge=lfs -text
+*.uexp filter=lfs diff=lfs merge=lfs -text
+
+# Source art / raw assets (store originals if needed)
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.gltf filter=lfs diff=lfs merge=lfs -text
+*.glb filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.obj filter=lfs diff=lfs merge=lfs -text
+
+# Textures
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.tga filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.hdr filter=lfs diff=lfs merge=lfs -text
+*.exr filter=lfs diff=lfs merge=lfs -text
+*.bmp filter=lfs diff=lfs merge=lfs -text
+
+# Audio
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.ogg filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.flac filter=lfs diff=lfs merge=lfs -text
+*.aif filter=lfs diff=lfs merge=lfs -text
+
+# Video
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+
+# Packaged builds (if you ever commit them — generally don't)
+*.pak filter=lfs diff=lfs merge=lfs -text
+*.apk filter=lfs diff=lfs merge=lfs -text
+
+# ── LINE ENDINGS ─────────────────────────────────────────────────────────────
+# Force LF for all text files to avoid Windows/Mac issues
+* text=auto
+
+# C++ source — explicit LF
+*.h text eol=lf
+*.cpp text eol=lf
+*.cs text eol=lf
+
+# Config files
+*.ini text eol=lf
+*.cfg text eol=lf
+
+# UE project descriptor
+*.uproject text eol=lf
+
+# Markdown / docs
+*.md text eol=lf
+*.txt text eol=lf
+
+# Scripts
+*.sh text eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
